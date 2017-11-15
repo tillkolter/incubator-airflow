@@ -147,7 +147,8 @@ except:
 
 configure_logging()
 configure_vars()
-configure_orm()
+if conf.get('core', 'with_db'):
+    configure_orm()
 
 # Const stuff
 
